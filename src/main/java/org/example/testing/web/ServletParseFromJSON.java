@@ -32,7 +32,7 @@ public class ServletParseFromJSON extends HttpServlet {
         String sort = request.getParameter("sort");
         String order = request.getParameter("order");
 
-        if (category != null) {
+        if ("wired-headphones".equals(category) || "wireless-headphones".equals(category) || "smart-watches".equals(category)) {
             for (Goods.Good good : goodList) {
                 if (good.getCategory().equals(category)) {
                     responseGoodList.add(good);
